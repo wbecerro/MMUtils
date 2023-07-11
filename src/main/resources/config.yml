@@ -1,0 +1,9 @@
+command: "jefes"
+nopermissions: "&cYou dont have permissions to do this"
+header: "&d=============================================="
+available: "&b - &e%boss_name% &bis available"
+oncooldown: "&b - &e%boss_name% &bis on cooldown for &e%boss_cooldown%"
+footer: "&d=============================================="
+blacklist:
+  - "exampleMob1"
+  - "exampleMob2"

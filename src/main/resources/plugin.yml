@@ -1,0 +1,10 @@
+name: MMUtils
+version: 1.0
+author: wbe
+main: wbe.mmutils.MMUtils
+api-version: 1.19
+description: 'Utils for Mythicmobs'
+depend: [MythicMobs]
+commands:
+  jefes:
+    description: Main command
