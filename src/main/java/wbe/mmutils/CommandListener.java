@@ -17,7 +17,7 @@ public class CommandListener implements CommandExecutor {
 
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (cmd.getName().equalsIgnoreCase(this.plugin.getConfig().getString("command")))
-            if (!sender.hasPermission("mmutils.jefes")) {
+            if (!sender.hasPermission("mmutils.bosses")) {
                 sender.sendMessage(this.plugin.getConfig().getString("nopermissions").replace("&", "§"));
             } else {
                 MythicBukkit mm = MythicBukkit.inst();
@@ -56,7 +56,7 @@ public class CommandListener implements CommandExecutor {
                                 m = String.valueOf(minutos) + "m ";
                             if (segundos > 0)
                                 seg = String.valueOf(segundos) + "s";
-                            tiempo = String.valueOf(h) + m + seg;
+                            tiempo = String.valueOf(h) + m;
                             sender.sendMessage(this.plugin.getConfig().getString("oncooldown").replace("%boss_name%", name).replace("%boss_cooldown%", tiempo).replace("&", "§"));
                             continue;
                         }
