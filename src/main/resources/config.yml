@@ -1,11 +1,20 @@
-command: "jefes"
-nopermissions: "&cYou dont have permissions to do this"
-bossDropsHeader: "&bEl jugador &e%player% &bha derrotado a %boss% &by ha soltado:"
-dropLine: "   - &e%item% &ex%amount%"
-header: "&d=============================================="
-available: "&b - &e%boss_name% &bis available"
-oncooldown: "&b - &e%boss_name% &bis on cooldown for &e%boss_cooldown%"
-footer: "&d=============================================="
-blacklist:
-  - "exampleMob1"
-  - "exampleMob2"
+Messages:
+  noPermission: '&b[&cJefes&b] &eNo tienes permiso para hacer eso.'
+  header: '&d&m=============================================='
+  bossDropsHeader: '&e%player% &bha derrotado a %boss% &by ha soltado:'
+  dropLine: '   - &e%item% &ex%amount%'
+  footer: '&d&m=============================================='
+  isAvailable: '&e - &a%boss_name% &eestá disponible'
+  onCooldown: '&e - &a%boss_name% &etardará &e%boss_cooldown%'
+  noSpawners: '&e - &eNo hay ningún jefe disponible actualmente.'
+  reload: '&b[&cJefes&b] &eSe ha recargado la configuración del plugin.'
+  help:
+    - "&d-===- &b[&cJefes&b] &d-===-"
+    - "&b/bosses &eMuestra esta página."
+    - "&b/bosses list &eMuestra el listado de jefes disponibles."
+    - "&b/bosses reload &eRecarga el plugin."
+
+Config:
+  blacklist:
+    - "exampleMob1"
+    - "exampleMob2"

@@ -1,10 +1,11 @@
 name: MMUtils
-version: 1.1
-author: wbe
+version: 1.2
 main: wbe.mmutils.MMUtils
 api-version: 1.20.4
-description: 'Utils for Mythicmobs'
+author: wbe
 depend: [MythicMobs]
 commands:
-  jefes:
-    description: Main command
+  Bosses:
+    description: MMUtils main command
+    aliases: [boss]
+    permission: mmutils.command
