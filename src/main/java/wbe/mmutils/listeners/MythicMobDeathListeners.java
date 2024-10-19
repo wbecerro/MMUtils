@@ -25,6 +25,10 @@ public class MythicMobDeathListeners implements Listener {
             return;
         }
 
+        if(event.getKiller() == null) {
+            return;
+        }
+
         List<ItemStack> drops = event.getDrops();
         Bukkit.getServer().broadcastMessage(MMUtils.messages.header);
         Bukkit.getServer().broadcastMessage(MMUtils.messages.bossDropsHeader
