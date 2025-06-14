@@ -3,6 +3,7 @@ package wbe.mmutils;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 import wbe.mmutils.commands.CommandListener;
+import wbe.mmutils.commands.TabListener;
 import wbe.mmutils.config.Config;
 import wbe.mmutils.config.Messages;
 import wbe.mmutils.listeners.EventListeners;
@@ -14,6 +15,8 @@ public class MMUtils extends JavaPlugin {
     private FileConfiguration configuration;
 
     private CommandListener commandListener;
+
+    private TabListener tabListener;
 
     private EventListeners eventListeners;
 
@@ -28,6 +31,8 @@ public class MMUtils extends JavaPlugin {
 
         commandListener = new CommandListener();
         getCommand("bosses").setExecutor(this.commandListener);
+        tabListener = new TabListener();
+        getCommand("bosses").setTabCompleter(this.tabListener);
         eventListeners = new EventListeners();
         this.eventListeners.initializeListeners();
     }
